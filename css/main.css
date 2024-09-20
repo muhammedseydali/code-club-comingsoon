@@ -1244,8 +1244,9 @@ input::-moz-focus-inner {
 }
 
 .home-logo img {
-  width: 100px;
-  height: 125;
+  width: 100%;
+  max-width: 100px; /* Ensures that the image does not grow too large */
+  height: auto; /* Maintains the aspect ratio */
 }
 
 
@@ -1676,6 +1677,11 @@ html.no-csstransitions .home-content__main {
     right: 35px;
   }
 
+  .home-logo img {
+    max-width: 80px;
+    height: auto;
+  }
+
   .home-content h1 {
     font-size: 5rem;
   }
@@ -1840,6 +1846,17 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width:800px) {
+
+  .home-logo {
+    right: 20px;
+    top: 20px;
+  }
+
+  .home-logo img {
+    max-width: 70px;
+    height: auto;
+  }
+  
   .home-content__main,
   .home-copyright {
     max-width: 600px;
@@ -1864,6 +1881,17 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width:700px) {
+
+  .home-logo {
+    right: 10px;
+    top: 15px;
+  }
+
+  .home-logo img {
+    max-width: 60px;
+    height: auto;
+  }
+
   .home-content h1 {
     font-size: 4rem;
   }
